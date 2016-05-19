@@ -29,7 +29,15 @@ var CRLF = '\r\n';
 */
 
 
-// takes an HTTP request as a string, returns an array of the first line's arguments
+// takes an HTTP request as a string, e.g.
+//
+//      GET /devskool.html HTTP/1.1\nHost: localhost:1100\nConnection: keep-alive\n
+//      etc...
+//
+// returns an array of the first line's arguments, e.g.
+//
+//      ['GET', '/devskool.html', 'HTTP/1.1']
+//
 exports.parseRequest = function(data) {
 
     /* TODO */
